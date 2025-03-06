@@ -13,4 +13,5 @@ export function exportToCSV(data) {
     a.href = url;
     a.download = `energy-data-${new Date().toISOString()}.csv`;
     a.click();
+    window.URL.revokeObjectURL(url);
 }

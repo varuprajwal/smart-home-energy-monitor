@@ -73,11 +73,10 @@ class EnergyMonitor {
     }
 
     startSimulation() {
-        // Changed interval from 60000 to 10000 (10 seconds)
         setInterval(() => {
             const randomUsage = (Math.random() * 2 + 0.5).toFixed(2);
             this.addEnergyReading(parseFloat(randomUsage));
-        }, 10000); // 10 seconds interval
+        }, 60000);
     }
 }
 
